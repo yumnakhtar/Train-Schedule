@@ -1,0 +1,25 @@
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+.subtitle {
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+.jumbotron {
+    padding: 40px;
+    background-image: url("../images/jumbo-back.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -300px;
+    background-size: 100%;
+
+}
