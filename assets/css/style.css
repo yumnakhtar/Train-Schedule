@@ -1,3 +1,7 @@
+body {
+    background-image: url("../images/123.jpg");
+}
+
 .title {
     font-size: 50px;
     font-weight: bold;
@@ -6,29 +10,41 @@
     color: #3c3e80;
 }
 
+.card {
+    border: none;
+}
+
 .subtitle {
     font-size: 15px;
     text-align: center;
+    color: #3c3e80;
 }
 
 .jumbotron {
     padding: 40px;
     background-image: url("../images/jumbo-back.jpg");
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    /* background-position-x: 20px; */
-    background-position-y: -300px;
+    background-repeat: no-repeat;    background-position-y: -300px;
     background-size: 100%;
 }
 
+/* .row {
+    width: 100%;
+} */
 .userInput {
     padding-bottom: 30px;
     text-align: center;
+    width: 100%;
 }
 
 #button {
-    width: 60px;
+    width: 150px;
     margin-left: 90px;
+}
+
+.curtrain {
+    background-color: #5b5d9b;
+    color: white;
 }
 
 table {
@@ -38,4 +54,17 @@ table {
 input {
     width: 30%;
     margin: 5px;
+}
+
+.card {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tableTop {
+    padding: 20px;
+    border-bottom: solid;
+    border-bottom-color: gray;
+    border-bottom-width: 1px;
 }
