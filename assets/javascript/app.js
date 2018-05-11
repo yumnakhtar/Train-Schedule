@@ -19,18 +19,37 @@ $(document).on("click", "#submit-train", function(){
 var name = $(".name").val();
 var destination = $(".destination").val();
 var frequency = $(".frequency").val();
-//creates objext with new inputs
+
+//algorithm for train times
+var start = $(".start").val();
+//creates object with new inputs
 var trainEntry = {};
 trainEntry["name"] = name;
 trainEntry["destination"] = destination;
+trainEntry["start"]=start;
 trainEntry["frequency"] = frequency;
-trainEntry["addDate"] = firebase.database.ServerValue.TIMESTAMP;
-//puts object into firebase as child
-database.ref(name).push(trainEntry);
+database.ref().push(trainEntry);
 })
 
 //printing onto DOM
-database.ref().orderByChild("addDate").on("child_added", function(snapshot){
-console.log("so far so good");
+database.ref().orderByChild("name").on("child_added", function(snapshot){
 
+var sv = snapshot.val();
+
+var name = sv.name;
+var destination = sv.destination;
+var frequency = sv.frequency;
+var nextArrive  = 0;
+var minAway = 0;
+
+
+
+var trainSched = $("<tr>");
+trainSched.append($("<td>").text(name));
+trainSched.append($("<td>").text(destination));
+trainSched.append($("<td>").text(frequency));
+trainSched.append($("<td>").text(nextArrive));
+trainSched.append($("<td>").text(minAway));
+
+$(".newTrain").append(trainSched);
 })

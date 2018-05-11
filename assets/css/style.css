@@ -56,6 +56,14 @@ input {
     margin: 5px;
 }
 
+.start {
+    margin-right: 150px;
+}
+
+.frequency {
+    margin-left: 15px;
+}
+
 .card {
     width: 80%;
     margin-left: auto;
@@ -67,4 +75,8 @@ input {
     border-bottom: solid;
     border-bottom-color: gray;
     border-bottom-width: 1px;
+}
+
+td {
+    padding: 10px
 }
